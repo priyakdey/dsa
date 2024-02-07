@@ -1,2 +1,2 @@
 test:
-	./gradlew test
+	./gradlew clean test

@@ -1,0 +1,6 @@
+- [ ] NumberTheoryUtils#lcm: Handle negative number inputs.
+- [ ] NumberTheoryUtils#lcm: Overflow issues with large inputs.
+- [ ] NumberTheoryUtils#gcd: Still slow for very large numbers. Ex: "281474976710597, 17, 1"
+- [ ] NumberTheoryUtils#generatePrimes: Memory efficiency - segmented sieve.
+- [ ] NumberTheoryUtils#generatePrimes: Array size limitation
+- [ ] NumberTheoryUtils#isPrime: For large numbers, this is still inefficient- Miller-Rabin primality check

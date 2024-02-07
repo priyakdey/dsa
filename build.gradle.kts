@@ -1,5 +1,6 @@
 import me.champeau.jmh.JMHTask
 import org.gradle.api.tasks.testing.logging.TestLogEvent
+import org.gradle.kotlin.dsl.support.kotlinCompilerOptions
 import java.util.*
 
 /*
@@ -54,9 +55,19 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junit5Version")
 }
 
+tasks.withType<JavaCompile> {
+    options.compilerArgs.add("--enable-preview")
+}
+
+tasks.withType<JavaExec> {
+    jvmArgs("--enable-preview")
+}
+
 // @formatter:off
 tasks.withType<Test> {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        jvmArgs("--enable-preview")
+    }
 
     testLogging {
         lifecycle {
