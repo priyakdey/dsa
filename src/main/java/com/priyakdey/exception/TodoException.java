@@ -1,4 +1,4 @@
-package com.priyakdey.algorithms.exception;
+package com.priyakdey.exception;
 
 /**
  * Util exception class to mock behaviour of <a href="https://doc.rust-lang.org/std/macro.todo.html">todo from Rust</a>

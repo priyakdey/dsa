@@ -1,6 +1,5 @@
 package com.priyakdey.nt;
 
-import com.priyakdey.algorithms.nt.NumberTheoryUtils;
 import java.io.IOException;
 import java.util.Random;
 import org.openjdk.jmh.Main;

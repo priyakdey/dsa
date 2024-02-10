@@ -3,6 +3,8 @@ package com.priyakdey.algorithms.sort;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import com.priyakdey.algorithms.util.IntegerArrayConverter;
+import com.priyakdey.sort.BubbleSorter;
+import com.priyakdey.sort.Sorter;
 import java.util.Arrays;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

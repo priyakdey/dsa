@@ -1,4 +1,4 @@
-package com.priyakdey.algorithms.nt;
+package com.priyakdey.nt;
 
 /**
  * Helper class with different method to work with fibonacci sequence.

@@ -4,3 +4,5 @@
 - [ ] NumberTheoryUtils#generatePrimes: Memory efficiency - segmented sieve.
 - [ ] NumberTheoryUtils#generatePrimes: Array size limitation
 - [ ] NumberTheoryUtils#isPrime: For large numbers, this is still inefficient- Miller-Rabin primality check
+- [ ] Implementation of Heap Sort, Radix Sort, Bucket Sort, Shell Sort, Tim's sort.
+- [ ] Document all sorting algorithms with diagram 

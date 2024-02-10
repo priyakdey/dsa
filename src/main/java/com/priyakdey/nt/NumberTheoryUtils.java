@@ -1,6 +1,6 @@
-package com.priyakdey.algorithms.nt;
+package com.priyakdey.nt;
 
-import com.priyakdey.algorithms.exception.TodoException;
+import com.priyakdey.exception.TodoException;
 
 /**
  * @author Priyak Dey

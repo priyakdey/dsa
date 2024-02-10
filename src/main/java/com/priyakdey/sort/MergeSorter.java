@@ -1,4 +1,4 @@
-package com.priyakdey.algorithms.sort;
+package com.priyakdey.sort;
 
 import java.lang.reflect.Array;
 import java.util.Comparator;
