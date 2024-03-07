@@ -2,7 +2,7 @@ package com.priyakdey.sort;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.priyakdey.algorithms.util.IntegerArrayConverter;
+import com.priyakdey.util.IntegerArrayConverter;
 import java.util.Arrays;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

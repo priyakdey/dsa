@@ -1,20 +1,18 @@
-package com.priyakdey.algorithms.sort;
+package com.priyakdey.sort;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.priyakdey.algorithms.util.IntegerArrayConverter;
-import com.priyakdey.sort.MergeSorter;
-import com.priyakdey.sort.Sorter;
+import com.priyakdey.util.IntegerArrayConverter;
 import java.util.Arrays;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
-@DisplayName("MergeSorter")
-class MergeSorterTest {
+@DisplayName("SelectionSorter")
+class SelectionSorterTest {
 
-    private final Sorter<Integer> naturalOrderSorter = new MergeSorter<>();
+    private final Sorter<Integer> naturalOrderSorter = new SelectionSorter<>();
 
     @ParameterizedTest(name = "test_sortInteger_naturalOrder")
     @CsvSource({

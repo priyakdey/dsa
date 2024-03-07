@@ -1,4 +1,4 @@
-package com.priyakdey.algorithms.nt;
+package com.priyakdey.nt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

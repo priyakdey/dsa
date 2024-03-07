@@ -1,20 +1,18 @@
-package com.priyakdey.algorithms.sort;
+package com.priyakdey.sort;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import com.priyakdey.algorithms.util.IntegerArrayConverter;
-import com.priyakdey.sort.InsertionSorter;
-import com.priyakdey.sort.Sorter;
+import com.priyakdey.util.IntegerArrayConverter;
 import java.util.Arrays;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
-@DisplayName("InsertionSorter")
-class InsertionSorterTest {
+@DisplayName("BubbleSorter")
+class BubbleSorterTest {
 
-    private final Sorter<Integer> naturalOrderSorter = new InsertionSorter<>();
+    private final Sorter<Integer> naturalOrderSorter = new BubbleSorter<>();
 
     @ParameterizedTest(name = "test_sortInteger_naturalOrder")
     @CsvSource({
@@ -40,6 +38,5 @@ class InsertionSorterTest {
             () -> String.format("expected %s, but got %s", Arrays.toString(expected),
                 Arrays.toString(input)));
     }
-
 
 }

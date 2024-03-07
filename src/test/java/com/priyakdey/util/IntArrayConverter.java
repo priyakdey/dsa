@@ -1,4 +1,4 @@
-package com.priyakdey.algorithms.util;
+package com.priyakdey.util;
 
 import java.util.Objects;
 import org.junit.jupiter.params.converter.ArgumentConversionException;

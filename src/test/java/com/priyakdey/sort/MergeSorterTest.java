@@ -1,22 +1,20 @@
-package com.priyakdey.algorithms.sort;
+package com.priyakdey.sort;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.priyakdey.algorithms.util.IntegerArrayConverter;
-import com.priyakdey.sort.QuickSorter;
-import com.priyakdey.sort.Sorter;
+import com.priyakdey.util.IntegerArrayConverter;
 import java.util.Arrays;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
-@DisplayName("QuickSorter")
-class QuickSorterTest {
+@DisplayName("MergeSorter")
+class MergeSorterTest {
 
-    private final Sorter<Integer> naturalOrderSorter = new QuickSorter<>();
+    private final Sorter<Integer> naturalOrderSorter = new MergeSorter<>();
 
-    @ParameterizedTest(name = "test_sortInteger_naturalOrder - sort({0} -> {1}")
+    @ParameterizedTest(name = "test_sortInteger_naturalOrder")
     @CsvSource({
         "'[1]'                             , '[1]'",
         "'[2, 1]'                          , '[1, 2]'",
@@ -40,6 +38,5 @@ class QuickSorterTest {
             () -> String.format("expected %s, but got %s", Arrays.toString(expected),
                 Arrays.toString(input)));
     }
-
 
 }
