@@ -1,7 +1,9 @@
 package com.priyakdey.graphs;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.Objects;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -37,8 +39,10 @@ class TraversalAlgorithmTest {
     @DisplayName("dfs")
     void dfs() {
         String actual = TraversalAlgorithm.dfs(root);
-        String expected = "a->c->b->d";
-        assertEquals(actual, expected,
-            () -> String.format("expected %s, but got %s%n", expected, actual));
+        String expected1 = "a->c->b->d";
+        String expected2 = "a->b->d->c";
+
+        assertTrue(Objects.equals(expected1, actual) || Objects.equals(expected2, actual),
+            () -> String.format("expected %s or %s, but got %s%n", expected1, expected2, actual));
     }
 }

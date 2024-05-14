@@ -37,18 +37,36 @@ public class TraversalAlgorithm {
 
     public static String dfs(Vertex root) {
         if (root == null) return "";
+        StringBuilder buffer = new StringBuilder();
 
+        // dfsIterative(root, buffer);
+
+        dfsRecursive(root, buffer);
+        buffer.delete(buffer.length() - 2, buffer.length());
+
+        return buffer.toString();
+    }
+
+    private static void dfsRecursive(Vertex vertex, StringBuilder buffer) {
+        buffer.append(vertex);
+        buffer.append("->");
+        vertex.setVisited(true);
+
+        for (Vertex neighbour : vertex.getNeighbours()) {
+            if (!neighbour.isVisited()) {
+                dfsRecursive(neighbour, buffer);
+            }
+        }
+    }
+
+    private static void dfsIterative(Vertex root, StringBuilder buffer) {
         Deque<Vertex> stack = new ArrayDeque<>();
         stack.push(root);
         root.setVisited(true);
 
-        StringBuilder sb = new StringBuilder();
-
         while (!stack.isEmpty()) {
             Vertex vertex = stack.pop();
-
-            sb.append(vertex);
-            sb.append("->");
+            buffer.append(vertex);
 
             for (Vertex neighbour : vertex.getNeighbours()) {
                 if (!neighbour.isVisited()) {
@@ -56,10 +74,11 @@ public class TraversalAlgorithm {
                     stack.push(neighbour);
                 }
             }
-        }
 
-        sb.delete(sb.length() - 2, sb.length());
-        return sb.toString();
+            if (!stack.isEmpty()) {
+                buffer.append("->");
+            }
+        }
     }
 
 
